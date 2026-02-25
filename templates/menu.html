@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block title %}Menu - The Trompo King{% endblock %}
+{% block og_title %}The Trompo King Menu - Authentic Mexican Food{% endblock %}
+
+{% block content %}
+<section class="menu-hero">
+    <div class="menu-hero-content">
+        <h1>Our Menu</h1>
+        <p>Authentic Mexican Cuisine at The Trompo King</p>
+    </div>
+</section>
+
+<section class="menu-container">
+    <!-- Tacos Section -->
+    <div class="menu-category">
+        <h2>🌮 Tacos</h2>
+        <div class="menu-grid">
+            {% for taco in menu_items['tacos'] %}
+            <div class="menu-item">
+                <div class="menu-item-image">
+                    <div class="menu-item-emoji">🌮</div>
+                </div>
+                <div class="menu-item-info">
+                    <h3>{{ taco['name'] }}</h3>
+                    <p class="menu-description">{{ taco['description'] }}</p>
+                    <div class="menu-footer">
+                        <span class="menu-price">${{ taco['price'] }}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Wings Section -->
+    <div class="menu-category">
+        <h2>🍗 Wings</h2>
+        <div class="menu-grid">
+            {% for wing in menu_items['wings'] %}
+            <div class="menu-item">
+                <div class="menu-item-image">
+                    <div class="menu-item-emoji">🍗</div>
+                </div>
+                <div class="menu-item-info">
+                    <h3>{{ wing['name'] }}</h3>
+                    <p class="menu-description">{{ wing['description'] }}</p>
+                    <div class="menu-footer">
+                        <span class="menu-price">${{ wing['price'] }}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Burritos Section -->
+    <div class="menu-category">
+        <h2>🌯 Burritos</h2>
+        <div class="menu-grid">
+            {% for burrito in menu_items['burritos'] %}
+            <div class="menu-item">
+                <div class="menu-item-image">
+                    <div class="menu-item-emoji">🌯</div>
+                </div>
+                <div class="menu-item-info">
+                    <h3>{{ burrito['name'] }}</h3>
+                    <p class="menu-description">{{ burrito['description'] }}</p>
+                    <div class="menu-footer">
+                        <span class="menu-price">${{ burrito['price'] }}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Enchiladas Section -->
+    <div class="menu-category">
+        <h2>🥙 Enchiladas</h2>
+        <div class="menu-grid">
+            {% for enchilada in menu_items['enchiladas'] %}
+            <div class="menu-item">
+                <div class="menu-item-image">
+                    <div class="menu-item-emoji">🥙</div>
+                </div>
+                <div class="menu-item-info">
+                    <h3>{{ enchilada['name'] }}</h3>
+                    <p class="menu-description">{{ enchilada['description'] }}</p>
+                    <div class="menu-footer">
+                        <span class="menu-price">${{ enchilada['price'] }}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Quesadillas Section -->
+    <div class="menu-category">
+        <h2>🥗 Quesadillas</h2>
+        <div class="menu-grid">
+            {% for quesadilla in menu_items['quesadillas'] %}
+            <div class="menu-item">
+                <div class="menu-item-image">
+                    <div class="menu-item-emoji">🥗</div>
+                </div>
+                <div class="menu-item-info">
+                    <h3>{{ quesadilla['name'] }}</h3>
+                    <p class="menu-description">{{ quesadilla['description'] }}</p>
+                    <div class="menu-footer">
+                        <span class="menu-price">${{ quesadilla['price'] }}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Sides Section -->
+    <div class="menu-category">
+        <h2>🍟 Sides & Extras</h2>
+        <div class="menu-grid">
+            {% for side in menu_items['sides'] %}
+            <div class="menu-item">
+                <div class="menu-item-image">
+                    <div class="menu-item-emoji">🍟</div>
+                </div>
+                <div class="menu-item-info">
+                    <h3>{{ side['name'] }}</h3>
+                    <p class="menu-description">{{ side['description'] }}</p>
+                    <div class="menu-footer">
+                        <span class="menu-price">${{ side['price'] }}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Beverages Section -->
+    <div class="menu-category">
+        <h2>🥤 Beverages</h2>
+        <div class="menu-grid">
+            {% for beverage in menu_items['beverages'] %}
+            <div class="menu-item">
+                <div class="menu-item-image">
+                    <div class="menu-item-emoji">🥤</div>
+                </div>
+                <div class="menu-item-info">
+                    <h3>{{ beverage['name'] }}</h3>
+                    <p class="menu-description">{{ beverage['description'] }}</p>
+                    <div class="menu-footer">
+                        <span class="menu-price">${{ beverage['price'] }}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="menu-note">
+    <div class="container">
+        <h2>About Our Menu</h2>
+        <p>All items are made with fresh, authentic ingredients. We pride ourselves on quality and taste. 
+        Ask our staff about daily specials and seasonal items!</p>
+        <p><strong>Vegetarian options available upon request.</strong></p>
+    </div>
+</section>
+{% endblock %}
